@@ -10,7 +10,6 @@ namespace DAN_XL_AndrejaKolesar
     class Program
     {
         public static string[] documentFormat = new string[2] { "A3", "A4" };
-
         public static void WriteColorsIntoFile()
         {
             string[] colors = new string[10] { "aqua", "black", "orange", "red", "blue", "purple", "green", "white", "yellow", "rose" };
@@ -26,6 +25,8 @@ namespace DAN_XL_AndrejaKolesar
         static void Main(string[] args)
         {
             WriteColorsIntoFile();
+            Document document = new Document();
+            Console.WriteLine(document.Color + " " + document.Format + " " + document.Orientation);
             Console.ReadKey();
         }
     }
