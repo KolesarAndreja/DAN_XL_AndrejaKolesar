@@ -14,17 +14,18 @@ namespace DAN_XL_AndrejaKolesar
         public void PrintDocument(Document document)
         {
             //printing duration is 1000ms
+            string computerName = Thread.CurrentThread.Name;
             Thread.Sleep(1000);
-            int computerNumber = Convert.ToInt16(Thread.CurrentThread.Name.Split('_')[1]);
-            Console.WriteLine("<-- Document has been successfully printed. User of {0} can take {1} document", Thread.CurrentThread.Name, document.Format);
+            Console.WriteLine("<-- Document has been successfully printed. User of {0} can take {1} document", computerName, document.Format);
             //locking countdown signal
             lock (locker)
             {
-                if (!Computer.PrintedDocuments.Contains(computerNumber))
+                if (!Computer.ComputersThatPrintedDocuments.Contains(computerName))
                 {
                     Computer.countdown.Signal();
                 }
-                Computer.PrintedDocuments.Add(computerNumber);
+                Computer.ComputersThatPrintedDocuments.Add(computerName);
+                
             }
         }
     }

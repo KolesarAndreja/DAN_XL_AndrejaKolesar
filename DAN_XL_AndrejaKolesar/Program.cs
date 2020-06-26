@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAN_XL_AndrejaKolesar
 {
     class Program
     {
-        public static string[] documentFormat = new string[2] { "A3", "A4" };
+        /// <summary>
+        /// Print into file colors from array
+        /// </summary>
         public static void WriteColorsIntoFile()
         {
             string[] colors = new string[10] { "aqua", "black", "orange", "red", "blue", "purple", "green", "white", "yellow", "rose" };
@@ -27,7 +25,6 @@ namespace DAN_XL_AndrejaKolesar
             //write colors in Paleta.txt
             WriteColorsIntoFile();
             Computer c = new Computer();
-
             c.CreateAndStartEachComputer();
             Console.ReadKey();
         }

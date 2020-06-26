@@ -6,13 +6,15 @@ namespace DAN_XL_AndrejaKolesar
 {
     class Document
     {
-        public Random random = new Random();
+        private Random random = new Random();
+        private string[] documentFormat = new string[2] { "A3", "A4" };
+
         //get random format from array
         public string Format
         {
             get
             {
-                return Program.documentFormat[random.Next(0, 2)];
+                return documentFormat[random.Next(0, 2)];
                 
             }
         }

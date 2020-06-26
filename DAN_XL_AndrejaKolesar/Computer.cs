@@ -12,8 +12,8 @@ namespace DAN_XL_AndrejaKolesar
         //decrement when computer for the first time prints document
         public static CountdownEvent countdown = new CountdownEvent(10);
 
-        //list of computers numbers that had printed documents. If computer X printed 2 documents, we will have value X twice in this list
-        public static List<int> PrintedDocuments = new List<int>();
+        //list of computers numbers that had printed documents. If computer X printed 2 documents, we will have it twice in this list
+        public static List<string> ComputersThatPrintedDocuments = new List<string>();
 
         /// <summary>
         /// Method creates and starts threads for every computer. Each computer will send request to printer for specific Document.
