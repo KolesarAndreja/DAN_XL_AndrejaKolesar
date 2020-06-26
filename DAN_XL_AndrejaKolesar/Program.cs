@@ -24,9 +24,11 @@ namespace DAN_XL_AndrejaKolesar
 
         static void Main(string[] args)
         {
+            //write colors in Paleta.txt
             WriteColorsIntoFile();
             Computer c = new Computer();
-            c.CreateThreadForEachComputer();
+
+            c.CreateAndStartEachComputer();
             Console.ReadKey();
         }
     }
