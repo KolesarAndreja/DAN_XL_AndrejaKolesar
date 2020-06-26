@@ -25,8 +25,8 @@ namespace DAN_XL_AndrejaKolesar
         static void Main(string[] args)
         {
             WriteColorsIntoFile();
-            Document document = new Document();
-            Console.WriteLine(document.Color + " " + document.Format + " " + document.Orientation);
+            Computer c = new Computer();
+            c.CreateThreadForEachComputer();
             Console.ReadKey();
         }
     }

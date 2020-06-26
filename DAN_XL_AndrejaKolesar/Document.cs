@@ -10,6 +10,7 @@ namespace DAN_XL_AndrejaKolesar
     class Document
     {
         public Random random = new Random();
+        //get random format from array
         public string Format
         {
             get
@@ -18,6 +19,8 @@ namespace DAN_XL_AndrejaKolesar
                 
             }
         }
+
+        //get random color from file
         public string Color
         {
             get
@@ -28,6 +31,7 @@ namespace DAN_XL_AndrejaKolesar
                 return line;
             }
         }
+        //get random orientation
         public string Orientation {
             get
             {
@@ -42,7 +46,6 @@ namespace DAN_XL_AndrejaKolesar
                 }
             }
         }
-
 
     }
 }
