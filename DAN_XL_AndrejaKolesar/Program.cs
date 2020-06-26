@@ -10,6 +10,7 @@ namespace DAN_XL_AndrejaKolesar
     {
         static void Main(string[] args)
         {
+            Console.WriteLine();
         }
     }
 }
