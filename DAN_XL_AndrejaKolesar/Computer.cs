@@ -46,7 +46,6 @@ namespace DAN_XL_AndrejaKolesar
                     }
                 }
             }
-            //Console.WriteLine("\n*Printing is completed*");
         }
 
         /// <summary>
